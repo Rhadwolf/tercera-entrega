@@ -1,0 +1,238 @@
+@charset "UTF-8";
+body {
+  background-color: rgb(246, 250, 247);
+  font-family: "Righteous-Regular";
+}
+
+@font-face {
+  font-family: "Righteous-Regular";
+  src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: "PatuaOne-Regular";
+  src: url(../fonts/PatuaOne-Regular.ttf);
+}
+h1, h2, h3, h4 {
+  font-family: "PatuaOne-Regular";
+  color: rgb(243, 143, 76);
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+.logo {
+  width: 30%;
+  border-radius: 50%;
+}
+
+section {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 100px;
+  margin: 20px auto;
+}
+
+nav {
+  text-align: center;
+}
+
+.menu {
+  list-style-type: none;
+  background-color: coral;
+  padding: 0;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.menu .item {
+  display: inline-block;
+  position: relative;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.menu .submenu {
+  position: absolute;
+  display: none;
+}
+
+.menu .submenu .sub_i {
+  display: grid;
+  font-size: 1.5rem;
+  padding: auto;
+}
+
+.menu .item a {
+  color: rgb(148, 224, 167);
+  text-decoration: none;
+  font-weight: bolder;
+  display: inline-block;
+  padding: 20px;
+}
+
+.menu .item a:hover {
+  color: aliceblue;
+}
+
+.menu .item:hover .submenu {
+  display: block;
+  color: aliceblue;
+}
+
+.menu .item:hover a {
+  background-color: rgb(148, 224, 167);
+  color: aliceblue;
+}
+
+.section1 {
+  background-image: url(../img/nutricion6.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin: 50px;
+}
+
+.section2 {
+  background-image: url(../img/nutricion5.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin: 50px;
+}
+
+.section3 {
+  background-image: url(../img/Nutrición-Humana-y-Dietética.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin: 50px;
+}
+
+.section4 {
+  background-image: url(../img/bio2.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin: 50px;
+}
+
+.section5 {
+  background-image: url(../img/nutricion6.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin: 50px;
+}
+
+.section5 h5 {
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: rgba(0, 100, 0, 0.37);
+}
+
+.section6 {
+  background-image: url(../img/nutricion7.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin: 50px;
+}
+
+.section7 {
+  background-image: url(../img/nutrición3.jpg);
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  margin: 50px;
+}
+
+.section1 p, .section2 p, .section3 p, .section4 p, .section5 p, .section6 p {
+  background-color: rgba(177, 241, 177, 0.664);
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.section1 h3 {
+  background-color: rgba(0, 100, 0, 0.37);
+}
+
+.section2 h3 {
+  background-color: rgba(0, 100, 0, 0.37);
+}
+
+.section3 h2 {
+  background-color: rgba(55, 55, 245, 0.452);
+}
+
+.section4 h2 {
+  background-color: rgba(169, 169, 169, 0.514);
+}
+
+.section6 h3 {
+  background-color: rgba(0, 100, 0, 0.37);
+}
+
+.padre {
+  background-color: coral;
+  width: 90%;
+  height: 80vh;
+  border: solid;
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 20px;
+}
+
+.hijo:hover {
+  transform: scale(1.2, 1.2);
+}
+
+@media screen and (max-width: 968px) {
+  .padre {
+    grid-template-columns: 1fr 1fr;
+    grid-row: repeat(2 1fr);
+    gap: 10px;
+    grid-template-areas: "hijo" "hijo" "hijo" "hijo" "hijo" "hijo";
+  }
+}
+@media screen and (max-width: 568px) {
+  .padre {
+    grid-template-columns: 1fr;
+    grid-row: repeat(6 1fr);
+    gap: 10px;
+    grid-template-areas: "hijo" "hijo" "hijo" "hijo" "hijo" "hijo";
+  }
+}/*# sourceMappingURL=estilo.css.map */

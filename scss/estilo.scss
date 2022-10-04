@@ -1,0 +1,126 @@
+body{
+    background-color: rgb(246, 250, 247);
+    font-family: "Righteous-Regular";
+}
+@font-face {
+    font-family: "Righteous-Regular";
+    src: url(../fonts/Righteous-Regular.ttf);
+}
+@font-face {
+    font-family: "PatuaOne-Regular";
+    src: url(../fonts/PatuaOne-Regular.ttf);
+}
+h1, h2, h3, h4{
+    font-family: "PatuaOne-Regular";
+    color: rgb(243, 143, 76);
+    text-align: center;
+    padding: 30px;
+}
+h1{font-size: 3rem;}
+h3{ font-size: 2.2rem;}
+.logo{
+    
+    width: 30%;
+    border-radius: 50%;
+
+    
+    
+}
+section{
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 100px;
+    margin: 20px auto;
+}
+nav{text-align: center;}
+.menu{list-style-type: none;
+background-color: coral;
+padding: 0;
+width: 90%;
+margin: 20px auto;
+}
+.menu .item{
+    display: inline-block;
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.menu .submenu{
+
+    position: absolute;
+    display: none;
+}
+.menu .submenu .sub_i{
+   display: grid;
+    font-size: 1.5rem;
+    padding: auto;
+    
+}
+.menu .item a{
+    color: rgb(148, 224, 167);
+    text-decoration: none;
+    font-weight: bolder;
+    display: inline-block;
+    padding: 20px;
+}
+.menu .item a:hover{
+    color: aliceblue;
+}
+.menu .item:hover .submenu{
+    display: block;
+    color: aliceblue;
+}
+.menu .item:hover a{
+    background-color: rgb(148, 224, 167);
+    color: aliceblue;
+}
+
+@import "section";
+
+.padre{
+    background-color: coral;
+    width: 90%;
+    height: 80vh;
+    border: solid;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 20px;
+    
+}
+.hijo:hover{transform: scale(1.2,1.2);}
+
+@media screen and (max-width: 968px){
+    .padre{ 
+        grid-template-columns: 1fr 1fr;
+        grid-row: repeat(2 1fr);
+         gap: 10px;
+        grid-template-areas: 
+        "hijo" "hijo"
+        "hijo" "hijo"
+        "hijo" "hijo";
+         }
+        }
+
+
+@media screen and (max-width: 568px){
+    .padre{ 
+        grid-template-columns: 1fr;
+        grid-row: repeat(6 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        "hijo"
+        "hijo"
+        "hijo"
+        "hijo"
+        "hijo"
+        "hijo";
+     }
+    }
+ 
